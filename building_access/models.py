@@ -9,8 +9,8 @@ from django.contrib.auth.models import User
 class Door(models.Model):
     name = models.CharField(max_length=128)
 
-    def __str__(self):
-        return self.name
+    #def __str__(self):
+    #    return self.name
 
 class Group(models.Model):
     name = models.CharField(max_length=128)
@@ -27,5 +27,5 @@ class Tag(models.Model):
     access_to_doors = models.ManyToManyField(Door)
     groups_member = models.ManyToManyField(Group)
 
-    def __str__(self):
-        return self.uid + self.note
+   # def __str__(self):
+   #     return self.uid
