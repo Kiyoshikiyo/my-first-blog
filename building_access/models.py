@@ -20,7 +20,7 @@ class Group(models.Model):
         return self.name
 
 class Tag(models.Model):
-    uid = models.BinaryField(max_length=10, unique=True)
+    uid = models.BinaryField(max_length=10, unique=True, editable=True)
     active = models.BooleanField(default=True)
     note = models.CharField(blank=True, max_length=128)
     owner = models.ForeignKey(User, on_delete=models.PROTECT)
@@ -28,4 +28,4 @@ class Tag(models.Model):
     groups_member = models.ManyToManyField(Group)
 
    # def __str__(self):
-   #     return self.uid
+    #    return self.uid
