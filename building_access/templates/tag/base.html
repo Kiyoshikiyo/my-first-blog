@@ -25,14 +25,16 @@
 <header class="site-header">
   <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
     <div class="container">
-      <a class="navbar-brand mr-4" href="/">Django tag</a>
+      <a class="navbar-brand mr-4" href="/">Náš hrad</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarToggle">
         <div class="navbar-nav mr-auto">
-          <a class="nav-item nav-link" href="{% url 'tag-home' %}">Home</a>
-          <a class="nav-item nav-link" href="{% url 'tag-about' %}">About</a>
+          <a class="nav-item nav-link" href="{% url 'tag-home' %}">Tags</a>
+          <a class="nav-item nav-link" href="{% url 'tag-about' %}">Doors</a>
+          <a class="nav-item nav-link" href="{% url 'tag-about' %}">Logs</a>
+          <a class="nav-item nav-link" href="{% url 'tag-about' %}">my account</a>
         </div>
         <!-- Navbar Right Side -->
         <div class="navbar-nav">
@@ -43,12 +45,20 @@
     </div>
   </nav>
 </header>
+<button class="add-tag-button"> Add tag</button> 
+<a href="#"> Add group</a>
+<style>
+  .add-tag-button{
+    margin-left: 245px;
+    border-radius: 12%;
+  }
+</style>
 <main role="main" class="container">
 <div class="row">
-<div class="col-md-8">
+<div class="col-md-12">
   {% block content %}{% endblock %}
 </div>
-<div class="col-md-4">
+<!--<div class="col-md-4">
   <div class="content-section">
     <h3>Our Sidebar</h3>
     <p class='text-muted'>You can put any information here you'd like.
@@ -61,7 +71,7 @@
     </p>
   </div>
 </div>
-</div>
+</div> -->
 </main>
 
 
