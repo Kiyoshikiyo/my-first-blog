@@ -1,44 +1,43 @@
 {% extends "tag/base.html" %}
 {% block content %}
 <article class="media content-section">
-<div class="media-body">
-<div class="article-metadata">
-<!--<a class="mr-2" href="#">{{ tag.note }}</a>
+  <div class="media-body">
+    <div class="article-metadata">
+      <!--<a class="mr-2" href="#">{{ tag.note }}</a>
 <a class="mr-2" href="#">{{ tag.active }}</a>
 <small class="text-muted">{{ tag.access_to_doors.all|join:", " }}</small> -->
-{% for tag in tags %}
+
+
 <style>
-    table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-    }
-    th, td {
-      padding: 4px;
-      text-align: left;
-    }
-    </style>  
-    <table style="width:1070px">
-      <col style="width:35%">
-      <tr>
-        
-        <th>uid</th>
-        <th>label</th>
-        <th>doors</th>
-        <th>actions</th>
-      </tr>
-      <col style="width:40%">
-      <tr>
-        <td>{{ tag.uid }}</td>
-        <td>{{ tag.note }}</td>
-        <td>{{ tag.access_to_doors.all|join:", " }}</td>
-        
-        <td><a href="#">Edit&nbsp;</a><a href="#">Disable&nbsp;</a><a href="#">Log</a></td>
-        <col style="width:40%">
-      </tr>
-    </col>
-    </table>
-    
+  table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  }
+  th, td {
+  padding: 4px;
+  text-align: left;
+  width: 60%;
+  }
+  </style>
+  <table tyle="width:1070px">
+    <tr>
+      <th>uid</th>
+      <th>note</th>
+      <th>doors</th>
+      <th>actions</th>
+    </tr>
+    {% for tag in tags %}
+    <tr>
+      <td>{{ tag.uid }}</td>
+      <td>{{ tag.note }}</td>
+      <td>{{ tag.access_to_doors.all|join:", " }}</td>
+      <td><a href="#">Edit&nbsp;</a><a href="#">Disable&nbsp;</a><a href="#">Log</a></td>
+    </tr>
+  </col>
     {% endfor %}
-</div>
+  </table>
+  
+  
+    </div>
 </article>
 {% endblock content %}
