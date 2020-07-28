@@ -25,7 +25,7 @@ SECRET_KEY = 'u#28_#7jfj^rgj_fh%&+yvi-pclir)md%@lsf9t0#imo6f28&d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://nashrad.herokuapp.com/"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'channels',
+    
 
     
 ]
@@ -53,6 +55,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'building_access.urls'
+ASGI_APPLICATION = ".routing.application"
 
 TEMPLATES = [
     {

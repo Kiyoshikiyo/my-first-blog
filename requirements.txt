@@ -1,4 +1,4 @@
-asgiref==3.2.7
+asgiref==3.2
 astroid==2.3.3
 autopy==4.0.0
 colorama==0.4.3
